@@ -29,12 +29,15 @@
 # 02 - Structural Directives, Pipes & Methods
 
 - add dynamic behaviour to HTML
-
+- *ngFor, *ngIf == structural directives
+- pipes currency, decimal, date, json....
 
 
 
 
 # 03 - Code Organization & Data Models
+
+- refactoring
 
 
 
