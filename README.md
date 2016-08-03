@@ -26,7 +26,7 @@ npm install
 
 Run the server:
 ```
-npm start
+npm run start
 ```
 
 Fire on your browser: <http://localhost:8081>
