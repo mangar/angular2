@@ -1,14 +1,13 @@
+import { Component } from '@angular/core';
+import { CarPartsComponent } from './car-parts.components'
 
+@Component({
+  selector: 'my-app',
+  template: `<h1>{{title}} - 03</h1>
+  <car-parts></car-parts>`,
+  directives: [CarPartsComponent]
+})
 
-// // import { bootstrap } from '@angular/platform-browser-dynamic';
-// import { Component } from '@angular/core';
-
-// @Component({
-//   selector: 'my-app',
-//   template: '<h1>->{{title}}</h1>'
-// })
-// export class AppComponent {
-//   title = "Title..."
-// } 
-
-// // bootstrap(AppComponent);
+export class AppComponent {  
+  title = 'Ultra Racing';
+}

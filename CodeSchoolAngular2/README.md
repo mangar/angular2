@@ -38,8 +38,18 @@
 # 03 - Code Organization & Data Models
 
 - refactoring
+-- main.ts: bootstrap the app
+-- export the class
+-- directives: []
 
 
+- html and css
+-- templateUrl: ""
+-- styleUrls: []
+
+
+- models & mocks
+-- 
 
 
 # 04 - Data Binding
