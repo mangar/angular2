@@ -16,6 +16,19 @@ export class CarPartsComponent {
       this.carParts = CARPARTS;
   }
 
+  upQuantity(carPart) {
+    if (carPart.quantity < carPart.inStock) {
+      carPart.quantity++;
+    }
+  }
+
+  downQuantity(carPart) {
+   if (carPart.quantity > 0) {
+      carPart.quantity--;
+    } 
+  }
+
+
   totalCarParts() {
     let sum = 0;
     for (let carPart of this.carParts) {

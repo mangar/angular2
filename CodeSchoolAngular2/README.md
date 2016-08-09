@@ -55,8 +55,12 @@
 # 04 - Data Binding
 
 - Property and Class binding
+-- property binding (<img [src]="carPart.image" [alt]="carPart.name">)
+-- class binding ([class.featured]="carPart.featured")
 
 
+- Event Binding
+-- 
 
 
 # 05 - Services & HTTP

@@ -1,10 +1,29 @@
 Total car parts: {{totalCarParts()}}
   <ul>
-    <li *ngFor="let carPart of carParts">
+    <li *ngFor="let carPart of carParts" [class.featured]="carPart.featured">
+
+    <div>
+      <!-- <img src="{{carPart.image}}" width="120px"> -->
+      <img [src]="carPart.image" [alt]="carPart.name" width="150px">
+    </div>
+
       <h2>{{carPart.name | uppercase}}</h2>
+
       <p>{{carPart.description}}</p>
+
       <p>{{carPart.price | currency:'BRL':true:'1.2-2'}}</p>
+
       <p *ngIf="carPart.inStock > 0">Quantidade em estoque: {{carPart.inStock}}</p>
       <p *ngIf="carPart.inStock === 0"><b>out of stock</b></p>
+
+      <div class="divAddButton">
+
+        <p>{{carPart.quantity}}</p>
+        <button (click)="downQuantity(carPart)">-</button>
+        <button (click)="upQuantity(carPart)">+</button>
+
+      </div>
+
+
      </li>
   </ul>
