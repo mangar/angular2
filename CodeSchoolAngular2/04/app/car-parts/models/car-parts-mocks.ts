@@ -28,7 +28,7 @@ export const CARPARTS: CarPart[] = [
     "price": 12,
     "inStock": 2,
     "image": "images/farolmilha.jpg",
-    "featured": false,
+    "featured": true,
     "quantity":0
   },
   {
