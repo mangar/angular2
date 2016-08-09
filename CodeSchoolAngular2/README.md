@@ -54,6 +54,7 @@
 
 # 04 - Data Binding
 
+- Property and Class binding
 
 
 
