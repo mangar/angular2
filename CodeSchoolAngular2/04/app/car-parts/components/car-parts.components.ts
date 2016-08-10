@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
-import { CarPart } from  "./car-parts/models/car-part";
-import { CARPARTS } from "./car-parts/models/car-parts-mocks";
+import { CarPart } from  "../models/car-part";
+import { CARPARTS } from "../models/car-parts-mocks";
 
 @Component({
   selector: 'car-parts',
-  templateUrl: "app/car-parts.components.html",
-  styleUrls: ["app/car-parts.components.css"]
+  templateUrl: "app/car-parts/car-parts.components.html",
+  styleUrls: ["app/car-parts/car-parts.components.css"]
 })
 
 export class CarPartsComponent {  
@@ -16,13 +16,13 @@ export class CarPartsComponent {
       this.carParts = CARPARTS;
   }
 
-  upQuantity(carPart) {
+  upQuantity(carPart: CarPart) {
     if (carPart.quantity < carPart.inStock) {
       carPart.quantity++;
     }
   }
 
-  downQuantity(carPart) {
+  downQuantity(carPart: CarPart) {
    if (carPart.quantity > 0) {
       carPart.quantity--;
     } 
