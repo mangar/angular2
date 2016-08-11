@@ -54,13 +54,20 @@
 
 # 04 - Data Binding
 
-- Property and Class binding
+- Property and Class binding  (JS to HTML)
 -- property binding (<img [src]="carPart.image" [alt]="carPart.name">)
 -- class binding ([class.featured]="carPart.featured")
 
 
-- Event Binding
--- 
+- Event Binding (HTML to JS)
+-- (click)="cancelPayment(cart)"
+
+
+- Two Way
+-- <input class="number" type="text" [value]="carPart.quantity" (input)="carPart.quantity = $event.target.value" >
+
+-- ngModel [()]
+-- <input class="number" type="text" [(ngModel)]="carPart.quantity" >
 
 
 # 05 - Services & HTTP
