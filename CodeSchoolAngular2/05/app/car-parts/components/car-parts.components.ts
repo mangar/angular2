@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CarPart } from  "../models/car-part";
 import { CARPARTS } from "../models/car-parts-mocks";
+import { RacingDataService } from "../services/racing-data.services";
 
 @Component({
   selector: 'car-parts',
@@ -10,10 +11,15 @@ import { CARPARTS } from "../models/car-parts-mocks";
 
 export class CarPartsComponent {  
 
+  constructor(private racingDataService: RacingDataService) {
+
+  }
+
   carParts : CarPart[] = [];
 
   ngOnInit() {
-      this.carParts = CARPARTS;
+      // this.carParts = CARPARTS;
+      this.carParts = this.racingDataService.getCarParts();
   }
 
   upQuantity(carPart: CarPart) {
