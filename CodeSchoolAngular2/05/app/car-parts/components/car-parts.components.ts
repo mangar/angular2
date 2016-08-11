@@ -18,7 +18,6 @@ export class CarPartsComponent {
   carParts : CarPart[] = [];
 
   ngOnInit() {
-      // this.carParts = CARPARTS;
       this.carParts = this.racingDataService.getCarParts();
   }
 
