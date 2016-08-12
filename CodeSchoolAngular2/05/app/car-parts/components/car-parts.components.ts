@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { CarPart } from  "../models/car-part";
-import { CARPARTS } from "../models/car-parts-mocks";
 import { RacingDataService } from "../services/racing-data.services";
 
 @Component({
@@ -12,13 +11,13 @@ import { RacingDataService } from "../services/racing-data.services";
 export class CarPartsComponent {  
 
   constructor(private racingDataService: RacingDataService) {
-
   }
 
   carParts : CarPart[] = [];
 
   ngOnInit() {
-      this.carParts = this.racingDataService.getCarParts();
+      // this.carParts = this.racingDataService.getCarParts();
+      this.racingDataService.getCarParts().subscribe(carParts => this.carParts = carParts);
   }
 
   upQuantity(carPart: CarPart) {
@@ -36,8 +35,10 @@ export class CarPartsComponent {
 
   totalCarParts() {
     let sum = 0;
-    for (let carPart of this.carParts) {
-      sum += carPart.inStock;
+    if (Array.isArray(this.carParts)) {
+      for (let carPart of this.carParts) {
+        sum += carPart.inStock;
+      }
     }
     return sum;
   }
