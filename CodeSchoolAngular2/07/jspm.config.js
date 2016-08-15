@@ -414,6 +414,7 @@ SystemJS.config({
     'es6-promise': 'npm:es6-promise@3.2.1',
     'es6-shim': 'npm:es6-shim@0.35.1',
     'font-awesome': 'npm:font-awesome@4.6.3',
+    'metismenu': 'npm:metismenu@2.5.2',
     'os': 'github:jspm/nodelibs-os@0.2.0-alpha',
     'process': 'github:jspm/nodelibs-process@0.2.0-alpha',
     'reflect-metadata': 'npm:reflect-metadata@0.1.3',

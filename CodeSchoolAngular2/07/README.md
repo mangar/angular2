@@ -8,6 +8,7 @@ npm install
 
 
 jspm install bootstrap font-awesome
+jspm install npm:metismenu
 
 jspm install
 ```
