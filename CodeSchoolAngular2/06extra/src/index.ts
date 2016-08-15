@@ -2,6 +2,7 @@
 
 import 'es6-shim';
 import 'zone.js/dist/zone';
+import 'bootstrap';
 
 import {bootstrap} from '@angular/platform-browser-dynamic';
 
@@ -15,6 +16,4 @@ if (production) {
   enableProdMode();
 }
 
-bootstrap(Root, [
-  provideRouter(routes)
-]);
+bootstrap(Root, [provideRouter(routes)]);
