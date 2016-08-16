@@ -3,18 +3,15 @@
 import 'es6-shim';
 import 'zone.js/dist/zone';
 import 'bootstrap';
-import 'metismenu';
+// import 'metismenu';
 
-// import '../js/admin.js';
+import { bootstrap } from '@angular/platform-browser-dynamic';
 
+import { provideRouter } from '@angular/router';
+import { enableProdMode } from '@angular/core';
+import { routes, Root } from './routes.ts';
 
-import {bootstrap} from '@angular/platform-browser-dynamic';
-
-import {provideRouter} from '@angular/router';
-import {enableProdMode} from '@angular/core';
-import {routes, Root} from './routes.ts';
-
-import {production} from '@system-env';
+import { production } from '@system-env';
 
 if (production) {
   enableProdMode();
