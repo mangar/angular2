@@ -10,11 +10,8 @@
             <li>
                 <a href="/projects"><i class="fa fa-bar-chart-o fa-fw"></i> Projects<span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level">
-                    <li>
-                        <a href="#"><small>Project 01</small></a>
-                    </li>
-                    <li>
-                        <a href="#"><small>Project 02</small></a>
+                    <li *ngFor="let project of projects">
+                        <a href="#"><small>{{project.name}}</small></a>
                     </li>
                 </ul>
             </li>
