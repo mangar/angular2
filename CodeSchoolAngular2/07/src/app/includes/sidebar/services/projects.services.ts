@@ -1,11 +1,15 @@
 import { Injectable } from '@angular/core';
-import { PROJECTS } from './projects.mocks';
-// import { Project } from './models/project';
+import { Http } from '@angular/http';
+import 'rxjs/add/operator/map';
+import { Project } from './models/project';
+
 
 @Injectable()
 export class ProjectsService {
 
+  constructor(private http: Http) { }
+
   getProjects() {
-    return PROJECTS;
+    return this.http.get('/json/projects.json').map(response => <Project[]>response.json().data);
   }
 }
