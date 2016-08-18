@@ -14,8 +14,12 @@ import { ProjectsService } from './services/projects.services';
 export class Sidebar {
   projects : Project[] = PROJECTS;
 
+  constructor(private projectsService: ProjectsService) {
+  }
+
   ngOnInit() {
-      this.projects = PROJECTS;
+      // this.projects = PROJECTS;
+      this.projects = this.projectsService.getProjects();
       // this.carParts = this.racingDataService.getCarParts();
       // this.racingDataService.getCarParts().subscribe(carParts => this.carParts = carParts);
   }

@@ -3,11 +3,11 @@ import { Project } from  '../models/project';
 export const PROJECTS: Project[] = [
   {
     'id': 1,
-    'name': 'Project 1'
+    'name': 'Project 01'
   },
   {
     'id': 2,
-    'name': 'Project 2'
+    'name': 'Project 02'
   },
   {
     'id': 3,
